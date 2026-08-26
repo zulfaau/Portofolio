@@ -125,8 +125,8 @@ export default function Portfolio() {
       images: ['/sapacoffe-1.png', '/sapacoffe-2.png', '/sapacoffe-3.png', '/sapacoffe-4.png'],
       techStack: ['PHP', 'Laravel', 'MySQL', 'Tailwind CSS', 'Chart.js', 'DomPDF', 'PhpSpreadsheet'],
       status: 'Completed',
-      liveUrl: 'https://github.com/zulfaau/CoffeSupply-LSP',
-      githubUrl: 'https://github.com/zulfaau/CoffeSupply-LSP',
+      liveUrl: 'https://github.com/zulfaau/CoffeSupplyLSP',
+      githubUrl: 'https://github.com/zulfaau/CoffeSupplyLSP',
       features: [
         'Real-time dashboard summarizing total items, incoming/outgoing stocks, and low stock warnings',
         'Stock movement logs (Riwayat Mutasi Persediaan) to track additions and reductions with notes',
