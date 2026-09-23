@@ -3,10 +3,10 @@ import { Code2, Award, Briefcase, Sparkles } from 'lucide-react';
 
 export default function About() {
   const stats = [
-    { icon: Code2, label: 'Projects Completed', value: '15+' },
+    { icon: Code2, label: 'Projects Completed', value: '6+' },
     { icon: Briefcase, label: 'Years Experience', value: '4+' },
     { icon: Sparkles, label: 'Technologies Mastered', value: '10+' },
-    { icon: Award, label: 'Certifications Earned', value: '15+' },
+    { icon: Award, label: 'Certifications Earned', value: '10+' },
   ];
 
   return (
@@ -61,7 +61,7 @@ export default function About() {
           >
             <h3 className="text-3xl font-bold">Professional Biography</h3>
             <p className="text-muted-foreground leading-relaxed text-justify">
-              Fresh graduate in Informatics from Universitas Gunadarma with a strong focus on Frontend Development. Experienced in developing responsive web applications using React.js, Next.js, JavaScript, and RESTful APIs, with additional knowledge in backend development using Node.js and Laravel. Passionate about building user-friendly interfaces, solving problems through technology, and continuously learning modern web development practices.
+              Fresh graduate in Informatics from Universitas Gunadarma with a strong focus on Front-End Web Developer. Experienced in developing responsive web applications using React.js, Next.js, JavaScript, and RESTful APIs, with additional knowledge in backend development using PHP, Node.js, and Laravel. Passionate about building user-friendly interfaces, solving problems through technology, and continuously learning modern web development practices.
             </p>
             <p className="text-muted-foreground leading-relaxed text-justify">
               My journey in software development started during my studies, and since then, I have worked on various projects ranging from waste reporting systems and warehouse management applications to responsive web-based platforms. I believe in writing clean, maintainable code while continuously learning new technologies and staying updated with modern development trends.

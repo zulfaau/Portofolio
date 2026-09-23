@@ -54,7 +54,7 @@ export default function Hero() {
             transition={{ delay: 0.4 }}
             className="text-xl text-muted-foreground leading-relaxed text-justify"
           >
-            Fresh graduate in Informatics from Universitas Gunadarma with a strong focus on Frontend Development. Experienced in developing responsive web applications using React.js, Next.js, JavaScript, and RESTful APIs, with additional knowledge in backend development using Node.js and Laravel. Passionate about building user-friendly interfaces, solving problems through technology, and continuously learning modern web development practices.
+            Fresh graduate in Informatics from Universitas Gunadarma with a strong focus on Front-End Web Developer. Experienced in developing responsive web applications using React.js, Next.js, JavaScript, and RESTful APIs, with additional knowledge in backend development using PHP, Node.js, and Laravel. Passionate about building user-friendly interfaces, solving problems through technology, and continuously learning modern web development practices.
           </motion.p>
 
           <motion.div

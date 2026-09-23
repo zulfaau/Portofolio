@@ -102,7 +102,7 @@ export default function Portfolio() {
       images: ['/trashtrack-3.png', '/trashtrack-2.png', '/trashtrack-1.png'],
       techStack: ['Laravel', 'React', 'Inertia.js', 'MySQL', 'Tailwind CSS', 'Leaflet', 'Cloudinary'],
       status: 'Completed',
-      liveUrl: 'https://github.com/zulfaau/trashtracker',
+      liveUrl: 'http://trashtracker.moondev.my.id/',
       githubUrl: 'https://github.com/zulfaau/trashtracker',
       features: [
         'Interactive Leaflet map integration for pinning waste locations',
@@ -125,7 +125,7 @@ export default function Portfolio() {
       images: ['/sapacoffe-1.png', '/sapacoffe-2.png', '/sapacoffe-3.png', '/sapacoffe-4.png'],
       techStack: ['PHP', 'Laravel', 'MySQL', 'Tailwind CSS', 'Chart.js', 'DomPDF', 'PhpSpreadsheet'],
       status: 'Completed',
-      liveUrl: 'https://github.com/zulfaau/CoffeSupplyLSP',
+      liveUrl: 'https://coffesupply.moondev.my.id/login',
       githubUrl: 'https://github.com/zulfaau/CoffeSupplyLSP',
       features: [
         'Real-time dashboard summarizing total items, incoming/outgoing stocks, and low stock warnings',
@@ -148,7 +148,7 @@ export default function Portfolio() {
       images: ['/wedding-1.png', '/wedding-2.png', '/wedding-3.png', '/wedding-4.png'],
       techStack: ['PHP', 'Laravel', 'Filament', 'MySQL', 'Tailwind CSS', 'Livewire', 'Alpine.js'],
       status: 'Completed',
-      liveUrl: 'https://github.com/zulfaau/wedding-organizer',
+      liveUrl: 'https://wo.moondev.my.id/',
       githubUrl: 'https://github.com/zulfaau/wedding-organizer',
       features: [
         'Responsive customer landing page and service profile catalog',
