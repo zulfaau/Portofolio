@@ -75,7 +75,7 @@ export default function Navbar() {
               <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
                 <Code2 className="w-6 h-6 text-white" />
               </div>
-              <span className="font-semibold text-xl">Zulfa.dev</span>
+              <span className="font-bold text-xl tracking-tight">&lt;<span className="text-primary">Zulfa</span> /&gt;</span>
             </motion.div>
 
             <div className="hidden md:flex items-center gap-8">

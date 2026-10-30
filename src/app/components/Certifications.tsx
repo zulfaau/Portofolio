@@ -23,15 +23,15 @@ export default function Certifications() {
   const certifications: Certification[] = [
     {
       id: 1,
-      title: 'Dasar Perancangan Aplikasi Web (Basic Web Application Design)',
+      title: 'Basic Web Application Development',
       organization: 'Universitas Gunadarma',
-      issueDate: 'September 2025',
+      issueDate: 'May 2026',
       credentialId: '670266',
       verificationUrl: '#',
       category: 'Frontend',
       description: 'Training covering basic web application design principles, HTML, CSS, and structural design.',
-      image: '/certificates/Cert-Basic Web Application.png',
-      certificateUrl: '/certificates/Cert-Basic Web Application.pdf',
+      image: '/certificates/Cert-Basic Web Application Development.png',
+      certificateUrl: '/certificates/Cert-Basic Web Application Development.pdf',
     },
     {
       id: 2,
@@ -136,7 +136,7 @@ export default function Certifications() {
     },
     {
       id: 10,
-      title: 'Dasar Bahasa Pemrograman JavaScript',
+      title: 'JavaScript Programming Language Fundamental',
       organization: 'Universitas Gunadarma',
       issueDate: 'September 2024',
       credentialId: '235576',

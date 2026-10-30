@@ -61,25 +61,25 @@ export default function About() {
           >
             <h3 className="text-3xl font-bold">Professional Biography</h3>
             <p className="text-muted-foreground leading-relaxed text-justify">
-              Fresh graduate in Informatics from Universitas Gunadarma with a strong focus on Front-End Web Developer. Experienced in developing responsive web applications using React.js, Next.js, JavaScript, and RESTful APIs, with additional knowledge in backend development using PHP, Node.js, and Laravel. Passionate about building user-friendly interfaces, solving problems through technology, and continuously learning modern web development practices.
+              Informatics graduate from Universitas Gunadarma with a strong focus on front-end web development. Proficient in building responsive, interactive, and user-friendly web interfaces using React.js and JavaScript. Experienced in integrating RESTful APIs, implementing authentication flows, and collaborating with back-end technologies such as PHP, Laravel, and Node.js. Also experienced in developing full-stack applications, including admin dashboards and an AI-powered chatbot using Retrieval-Augmented Generation (RAG). Passionate about creating intuitive user experiences and maintainable web applications.
             </p>
             <p className="text-muted-foreground leading-relaxed text-justify">
-              My journey in software development started during my studies, and since then, I have worked on various projects ranging from waste reporting systems and warehouse management applications to responsive web-based platforms. I believe in writing clean, maintainable code while continuously learning new technologies and staying updated with modern development trends.
+              My journey in software development has spanned across building real-world projects such as AI-powered chatbot systems, waste management applications, coffee inventory tracking, and municipal government portals. I focus on writing clean, scalable code and delivering seamless user interfaces.
             </p>
 
             <div className="space-y-4 pt-4">
               <div>
                 <h4 className="font-semibold mb-2 text-foreground">Education</h4>
                 <p className="text-muted-foreground font-medium">
-                  Bachelor of Informatics
+                  Bachelor of Informatics (GPA: 3.79 / 4.00)
                 </p>
-                <p className="text-sm text-muted-foreground">Universitas Gunadarma • 2022–2026 (Expected)</p>
+                <p className="text-sm text-muted-foreground">Universitas Gunadarma • 2022 – 2026</p>
               </div>
 
               <div>
                 <h4 className="font-semibold mb-2 text-foreground">Career Goals</h4>
                 <p className="text-muted-foreground">
-                  Aspiring to grow as a Frontend Web Developer while contributing to innovative projects, improving user experiences, and building impactful digital solutions through technology.
+                  Aspiring to grow as a Frontend Web Developer while contributing to innovative projects, improving user experiences, and building impactful digital solutions through modern web technologies.
                 </p>
               </div>
             </div>

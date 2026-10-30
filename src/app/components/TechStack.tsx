@@ -4,25 +4,26 @@ import { Code2, Database, Layout, Server, Smartphone, GitBranch } from 'lucide-r
 export default function TechStack() {
   const technologies = {
     frontend: {
-      title: 'Frontend',
+      title: 'Front-End',
       icon: Layout,
       color: 'from-purple-500 to-pink-500',
       skills: [
-        { name: 'React', level: 95 },
-        { name: 'Tailwind CSS', level: 90 },
         { name: 'JavaScript', level: 92 },
-        { name: 'TypeScript', level: 85 },
+        { name: 'React.js', level: 95 },
+        { name: 'Tailwind CSS', level: 92 },
+        { name: 'HTML & CSS', level: 95 },
+        { name: 'Figma', level: 85 },
       ],
     },
     backend: {
-      title: 'Backend',
+      title: 'Back-End',
       icon: Server,
       color: 'from-pink-500 to-rose-500',
       skills: [
-        { name: 'Laravel', level: 90 },
-        { name: 'PHP', level: 88 },
-        { name: 'Node.js', level: 82 },
-        { name: 'REST APIs', level: 93 },
+        { name: 'PHP & Laravel', level: 90 },
+        { name: 'Node.js & Express.js', level: 85 },
+        { name: 'Python', level: 82 },
+        { name: 'RESTful API', level: 92 },
       ],
     },
     database: {
@@ -31,20 +32,19 @@ export default function TechStack() {
       color: 'from-teal-500 to-cyan-500',
       skills: [
         { name: 'MySQL', level: 90 },
-        { name: 'PostgreSQL', level: 85 },
-        { name: 'MongoDB', level: 80 },
-        { name: 'Redis', level: 75 },
+        { name: 'PostgreSQL', level: 88 },
+        { name: 'Supabase', level: 85 },
       ],
     },
     tools: {
-      title: 'Tools & Deployment',
+      title: 'Tools & AI / Libraries',
       icon: GitBranch,
       color: 'from-violet-500 to-purple-500',
       skills: [
-        { name: 'Git/GitHub', level: 95 },
-        { name: 'Vercel', level: 90 },
-        { name: 'Docker', level: 80 },
-        { name: 'VS Code', level: 98 },
+        { name: 'Git & GitHub', level: 92 },
+        { name: 'Leaflet.js', level: 88 },
+        { name: 'Cloudinary', level: 86 },
+        { name: 'Gemini API (RAG)', level: 90 },
       ],
     },
   };

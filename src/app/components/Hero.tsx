@@ -32,7 +32,7 @@ export default function Hero() {
             transition={{ delay: 0.2 }}
           >
             <span className="inline-block px-4 py-2 bg-accent/10 text-accent rounded-full mb-4">
-              Frontend Developer
+              Frontend Web Developer
             </span>
           </motion.div>
 
@@ -54,7 +54,7 @@ export default function Hero() {
             transition={{ delay: 0.4 }}
             className="text-xl text-muted-foreground leading-relaxed text-justify"
           >
-            Fresh graduate in Informatics from Universitas Gunadarma with a strong focus on Front-End Web Developer. Experienced in developing responsive web applications using React.js, Next.js, JavaScript, and RESTful APIs, with additional knowledge in backend development using PHP, Node.js, and Laravel. Passionate about building user-friendly interfaces, solving problems through technology, and continuously learning modern web development practices.
+            Informatics graduate from Universitas Gunadarma with a strong focus on front-end web development. Proficient in building responsive, interactive, and user-friendly web interfaces using React.js and JavaScript. Experienced in integrating RESTful APIs, implementing authentication flows, and collaborating with back-end technologies such as PHP, Laravel, and Node.js. Also experienced in developing full-stack applications, including admin dashboards and an AI-powered chatbot using Retrieval-Augmented Generation (RAG). Passionate about creating intuitive user experiences and maintainable web applications.
           </motion.p>
 
           <motion.div
