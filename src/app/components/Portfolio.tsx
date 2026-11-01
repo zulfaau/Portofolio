@@ -27,6 +27,7 @@ interface Project {
   id: number;
   title: string;
   category: string;
+  badge?: string;
   description: string;
   detailedDescription: string;
   images: string[]; // Supports emoji string placeholders or file paths
@@ -73,7 +74,7 @@ export default function Portfolio() {
     {
       id: 7,
       title: 'ScholarBot (Scholar Finder)',
-      category: 'Frontend',
+      category: 'Fullstack',
       description: 'Platform AI Chatbot cerdas untuk pencarian beasiswa terintegrasi RAG',
       detailedDescription:
         'Platform pencarian beasiswa terintegrasi dengan AI Chatbot (ScholarBot). Menggunakan arsitektur RAG (Retrieval-Augmented Generation) dan Hybrid Retrieval untuk menemukan informasi beasiswa yang paling relevan. Terintegrasi dengan LLM Gemini 2.5 Flash Lite melalui platform OpenRouter.',
@@ -93,73 +94,97 @@ export default function Portfolio() {
         'Mengimplementasikan arsitektur RAG yang efisien dengan Hybrid Retrieval, serta menyambungkan API OpenRouter untuk Gemini 2.5 Flash Lite agar respon chatbot tetap cepat dan akurat untuk pengguna.',
     },
     {
+      id: 6,
+      title: 'LAMAS KDW',
+      category: 'Fullstack',
+      description: 'Layanan Aspirasi dan Pengaduan Masyarakat Kelurahan Kelapa Dua Wetan',
+      detailedDescription:
+        'Aplikasi web yang dikembangkan untuk menangani permohonan layanan publik, pengaduan, dan laporan aspirasi masyarakat Kelurahan Kelapa Dua Wetan. Dilengkapi dengan portal warga modern untuk pengajuan dan pelacakan laporan, asisten virtual berbasis AI, serta dashboard administrasi lengkap untuk petugas.',
+      images: ['/lamas-1.png', '/lamas-2.png', '/lamas-3.png', '/lamas-4.png'],
+      techStack: ['Next.js', 'Laravel', 'PHP', 'MySQL', 'Tailwind CSS'],
+      status: 'Completed',
+      liveUrl: 'https://lamas-kdw.vercel.app/',
+      githubUrl: 'https://github.com/zulfaau/lamas-kdw',
+      features: [
+        'Portal warga untuk mengajukan dan melacak pengaduan serta aspirasi masyarakat',
+        'Asisten virtual berbasis AI untuk respons layanan pelanggan otomatis',
+        'Panel administrasi petugas untuk memvalidasi, memperbarui, dan mengelola laporan',
+        'Dashboard real-time yang menampilkan jumlah status (Aktif, Diproses, Selesai, Ditolak)',
+        'Frontend terpisah (decoupled) yang dibangun dengan Next.js dan di-styling dengan Tailwind CSS',
+        'Backend REST API yang tangguh dan aman dengan framework Laravel PHP',
+      ],
+      challenges:
+        'Mengembangkan alur autentikasi frontend-backend terpisah yang aman di domain berbeda, mengelola kebijakan CORS, dan memastikan pembaruan status real-time yang cepat dari Laravel ke klien Next.js.',
+    },
+    {
       id: 1,
       title: 'TrashTracker',
-      category: 'Frontend',
-      description: 'An interactive community-driven waste reporting and monitoring system',
+      category: 'Fullstack',
+      description: 'Sistem pelaporan dan pemantauan sampah interaktif berbasis komunitas',
       detailedDescription:
-        'A web application built to facilitate community-driven environmental monitoring. Users can pin trash locations on an interactive map, upload photo evidence, and track cleaning progress, while administrators can coordinate cleaning efforts and download reports.',
+        'Aplikasi web yang dibangun untuk mendukung pemantauan lingkungan berbasis komunitas. Pengguna dapat menandai lokasi sampah pada peta interaktif, mengunggah foto sebagai bukti, dan memantau progres pembersihan, sementara administrator dapat mengoordinasikan kegiatan pembersihan dan mengunduh laporan.',
       images: ['/trashtrack-3.png', '/trashtrack-2.png', '/trashtrack-1.png'],
       techStack: ['Laravel', 'React', 'Inertia.js', 'MySQL', 'Tailwind CSS', 'Leaflet', 'Cloudinary'],
       status: 'Completed',
       liveUrl: 'http://trashtracker.moondev.my.id/',
       githubUrl: 'https://github.com/zulfaau/trashtracker',
       features: [
-        'Interactive Leaflet map integration for pinning waste locations',
-        'Real-time report submission with details, category, and coordinate tagging',
-        'Secure image upload and cloud storage integration using Cloudinary',
-        'Comprehensive administration panel for processing, tracking, and validating cleanup tasks',
-        'PDF export functionality for cleaning reports and offline coordination',
-        'Seamless client-server integration utilizing Inertia.js and React components',
+        'Integrasi peta interaktif Leaflet untuk menandai lokasi sampah',
+        'Pengiriman laporan secara real-time lengkap dengan detail, kategori, dan penandaan koordinat',
+        'Unggah gambar yang aman dengan penyimpanan cloud menggunakan Cloudinary',
+        'Panel administrasi lengkap untuk memproses, memantau, dan memvalidasi tugas pembersihan',
+        'Fitur ekspor PDF untuk laporan pembersihan dan koordinasi secara offline',
+        'Integrasi client-server yang mulus menggunakan Inertia.js dan komponen React',
       ],
       challenges:
-        'Integrating real-time map controls with Leaflet coordinates, organizing a secure two-tier role routing (User vs Admin), and managing image upload pipelines to Cloudinary storage within Inertia page transitions.',
+        'Mengintegrasikan kontrol peta real-time dengan koordinat Leaflet, menyusun routing dua tingkat peran yang aman (User vs Admin), dan mengelola alur unggah gambar ke penyimpanan Cloudinary di tengah perpindahan halaman Inertia.',
     },
     {
       id: 2,
       title: 'SapaCoffe',
-      category: 'Frontend',
-      description: 'A web-based coffee supply inventory management system',
+      category: 'Fullstack',
+      badge: 'BNSP Certified',
+      description: 'Sistem pelacakan dan pengelolaan inventaris persediaan kopi berbasis web',
       detailedDescription:
-        'A comprehensive inventory tracking and management system designed for coffee shops and suppliers. The system enables users to monitor stock levels, record incoming and outgoing stock movements, manage product databases, and export detailed Excel/PDF reports.',
+        'Sistem pelacakan dan pengelolaan inventaris yang lengkap, dirancang untuk kedai kopi dan pemasok. Sistem ini memungkinkan pengguna memantau tingkat stok, mencatat stok masuk dan keluar, mengelola database produk, serta mengekspor laporan terperinci dalam format Excel/PDF.',
       images: ['/sapacoffe-1.png', '/sapacoffe-2.png', '/sapacoffe-3.png', '/sapacoffe-4.png'],
       techStack: ['PHP', 'Laravel', 'MySQL', 'Tailwind CSS', 'Chart.js', 'DomPDF', 'PhpSpreadsheet'],
       status: 'Completed',
       liveUrl: 'https://coffesupply.moondev.my.id/login',
       githubUrl: 'https://github.com/zulfaau/CoffeSupplyLSP',
       features: [
-        'Real-time dashboard summarizing total items, incoming/outgoing stocks, and low stock warnings',
-        'Stock movement logs (Riwayat Mutasi Persediaan) to track additions and reductions with notes',
-        'Master data management for categorized coffee supplies and packaging products',
-        'Visual charts illustrating 7-day stock movements using Chart.js',
-        'User account administration with role controls (Admin & Super Admin)',
-        'Exportable inventory reports to PDF and Excel formats',
+        'Dashboard real-time yang merangkum total barang, stok masuk/keluar, dan peringatan stok menipis',
+        'Log pergerakan stok (Riwayat Mutasi Persediaan) untuk melacak penambahan dan pengurangan beserta catatannya',
+        'Pengelolaan data master untuk bahan kopi dan produk kemasan yang dikategorikan',
+        'Grafik visual pergerakan stok 7 hari terakhir menggunakan Chart.js',
+        'Administrasi akun pengguna dengan kontrol peran (Admin & Super Admin)',
+        'Laporan inventaris yang dapat diekspor ke format PDF dan Excel',
       ],
       challenges:
-        'Managing accurate state synchronization between the database and inventory transactions, implementing a reliable PDF rendering system using DomPDF for reports, and formatting Excel sheet structures dynamically using PhpSpreadsheet.',
+        'Menjaga sinkronisasi data yang akurat antara database dan transaksi inventaris, membangun sistem pembuatan PDF yang andal dengan DomPDF untuk laporan, serta memformat struktur lembar Excel secara dinamis menggunakan PhpSpreadsheet.',
     },
     {
       id: 3,
       title: 'JeWePe Wedding',
-      category: 'Frontend',
-      description: 'A comprehensive wedding organizer booking and catalog platform',
+      category: 'Fullstack',
+      description: 'Platform katalog dan pemesanan layanan wedding organizer online terpadu',
       detailedDescription:
-        'A web application developed for JeWePe Wedding Organizer to present service catalogs, facilitate online wedding package bookings with detailed customer forms, and manage all orders through an administrative backoffice.',
+        'Aplikasi web yang dikembangkan untuk JeWePe Wedding Organizer untuk menampilkan katalog layanan, memfasilitasi pemesanan paket pernikahan secara online melalui formulir pelanggan yang lengkap, dan mengelola seluruh pesanan melalui backoffice administrasi.',
       images: ['/wedding-1.png', '/wedding-2.png', '/wedding-3.png', '/wedding-4.png'],
       techStack: ['PHP', 'Laravel', 'Filament', 'MySQL', 'Tailwind CSS', 'Livewire', 'Alpine.js'],
       status: 'Completed',
       liveUrl: 'https://wo.moondev.my.id/',
       githubUrl: 'https://github.com/zulfaau/wedding-organizer',
       features: [
-        'Responsive customer landing page and service profile catalog',
-        'Interactive wedding package browser with price details and locations',
-        'Online booking form for selecting packages, scheduling event dates, and inputting notes',
-        'Robust admin panel powered by Filament PHP for processing customer requests',
-        'Comprehensive status tracking (Request, Approved, Completed) for bookings',
-        'Dynamic data synchronization with MySQL using Eloquent ORM',
+        'Halaman landing pelanggan yang responsif dan katalog profil layanan',
+        'Penjelajah paket pernikahan interaktif dengan detail harga dan lokasi',
+        'Formulir pemesanan online untuk memilih paket, menjadwalkan tanggal acara, dan mengisi catatan',
+        'Panel admin tangguh berbasis Filament PHP untuk memproses permintaan pelanggan',
+        'Pelacakan status pemesanan yang lengkap (Request, Approved, Completed)',
+        'Sinkronisasi data dinamis dengan MySQL menggunakan Eloquent ORM',
       ],
       challenges:
-        'Integrating Filament PHP framework to build a quick and secure administrative dashboard while keeping the frontend client-side light using pure blade and Tailwind styles, and managing transaction date conflicts for wedding bookings.',
+        'Mengintegrasikan framework Filament PHP untuk membangun dasbor administrasi yang cepat dan aman, sambil menjaga sisi frontend tetap ringan dengan Blade murni dan gaya Tailwind, serta mengelola konflik tanggal transaksi pada pemesanan pernikahan.',
     },
     {
       id: 4,
@@ -184,52 +209,6 @@ export default function Portfolio() {
       ],
       challenges:
         'Synchronizing state updates dynamically in React after notes are deleted, structuring validation using React Hook Form, and resolving CORS issues during cross-origin API calls between the Vite client and Express server.',
-    },
-    {
-      id: 5,
-      title: 'Kopi4',
-      category: 'Frontend',
-      description: 'An online coffee shop catalog and ordering platform',
-      detailedDescription:
-        'A web application developed for Toko Kopi "Kopi4" to display a premium catalog of coffee and drink items, provide product details and reviews, facilitate a shopping cart with real-time checkout summaries, and feature backend security measures.',
-      images: ['/kopipour-1.jpg', '/kopipour-2.jpg', '/kopipour-3.jpg', '/kopipour-4.png'],
-      techStack: ['Python', 'Django', 'PostgreSQL', 'Tailwind CSS'],
-      status: 'Completed',
-      liveUrl: 'https://github.com/zulfaau/Kopi4',
-      githubUrl: 'https://github.com/zulfaau/Kopi4',
-      features: [
-        'Responsive store homepage featuring product banners and catalogs',
-        'Product details view with review counts, pricing, and quantity adjustments',
-        'Interactive shopping cart system calculating original prices, tax, and order totals',
-        'Secure login page with a beautiful split layout and background cover',
-        'Django administration backoffice configured with database migrations',
-        'Robust PostgreSQL integration for handling inventory and users data',
-      ],
-      challenges:
-        'Integrating Tailwind CSS with Django template architectures, configuring safe database connections for PostgreSQL, and handling persistent shopping cart states across user sessions.',
-    },
-    {
-      id: 6,
-      title: 'LAMAS KDW',
-      category: 'Frontend',
-      description: 'Layanan Aspirasi dan Pengaduan Masyarakat Kelurahan Kelapa Dua Wetan',
-      detailedDescription:
-        'A web application developed to handle public service requests, complaints, and aspiration reports for Kelurahan Kelapa Dua Wetan. Features a modern resident portal for report submission and tracking, an AI-powered virtual assistant, and a comprehensive administration dashboard for officers.',
-      images: ['/lamas-1.png', '/lamas-2.png', '/lamas-3.png', '/lamas-4.png'],
-      techStack: ['Next.js', 'Laravel', 'PHP', 'MySQL', 'Tailwind CSS'],
-      status: 'Completed',
-      liveUrl: 'https://lamas-kdw.vercel.app/',
-      githubUrl: 'https://github.com/zulfaau/lamas-kdw',
-      features: [
-        'Resident portal for submitting and tracking public complaints and aspirations',
-        'AI-powered virtual assistant for automated customer service responses',
-        'Officer administration panel for validating, updating, and managing reports',
-        'Real-time dashboard showing status counts (Active, In Progress, Completed, Rejected)',
-        'Decoupled frontend built with Next.js and styled with Tailwind CSS',
-        'Robust and secure REST API backend powered by Laravel PHP framework',
-      ],
-      challenges:
-        'Developing a secure split frontend-backend authentication flow across different domains, managing CORS policies, and ensuring swift real-time status updates from Laravel to the Next.js client.',
     },
   ];
 
@@ -633,12 +612,20 @@ export default function Portfolio() {
 
             {/* Project Text Content */}
             <div className="p-6 flex flex-col flex-grow">
-              <div className="flex items-center justify-between mb-3">
-                <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-semibold">
-                  {project.category}
-                </span>
+              <div className="flex items-center justify-between mb-3 gap-2">
+                <div className="flex items-center gap-1.5 flex-wrap">
+                  <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-semibold">
+                    {project.category}
+                  </span>
+                  {project.badge && (
+                    <span className="px-2.5 py-0.5 bg-amber-500/15 border border-amber-500/40 text-amber-700 dark:text-amber-300 rounded-full text-[11px] font-bold flex items-center gap-1 shadow-xs">
+                      <Award className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" />
+                      {project.badge}
+                    </span>
+                  )}
+                </div>
                 <span
-                  className={`px-3 py-1 rounded-full text-xs font-semibold ${
+                  className={`px-3 py-1 rounded-full text-xs font-semibold shrink-0 ${
                     project.status === 'Completed'
                       ? 'bg-green-500/10 text-green-500'
                       : 'bg-yellow-500/10 text-yellow-500'
@@ -788,20 +775,20 @@ export default function Portfolio() {
 
         {/* Show More / Show Less Toggle Button */}
         {certifications.length > 6 && (
-          <div className="flex justify-center pt-4">
+          <div className="flex justify-center pt-2">
             <button
               onClick={() => setShowAllCerts(!showAllCerts)}
-              className="px-8 py-3 bg-card/40 hover:bg-card/70 backdrop-blur-md border border-border hover:border-primary/50 text-foreground hover:text-primary rounded-xl font-bold transition-all duration-300 flex items-center gap-2 hover:shadow-lg shadow-sm cursor-pointer group"
+              className="px-4 py-2 bg-card/50 hover:bg-card/80 backdrop-blur-md border border-border/80 hover:border-primary/50 text-muted-foreground hover:text-primary rounded-full text-xs font-semibold transition-all duration-300 flex items-center gap-1.5 shadow-xs hover:shadow-sm cursor-pointer group"
             >
               {showAllCerts ? (
                 <>
-                  Show Less Certificates
-                  <ChevronUp className="w-4.5 h-4.5 transform group-hover:-translate-y-0.5 transition-transform duration-300" />
+                  <span>Show Less</span>
+                  <ChevronUp className="w-3.5 h-3.5 transform group-hover:-translate-y-0.5 transition-transform duration-300" />
                 </>
               ) : (
                 <>
-                  Show More Certificates ({certifications.length - 6} More)
-                  <ChevronDown className="w-4.5 h-4.5 transform group-hover:translate-y-0.5 transition-transform duration-300" />
+                  <span>Show More ({certifications.length - 6} More)</span>
+                  <ChevronDown className="w-3.5 h-3.5 transform group-hover:translate-y-0.5 transition-transform duration-300" />
                 </>
               )}
             </button>
@@ -825,7 +812,7 @@ export default function Portfolio() {
 
     // 2. Limit elements for 'all' tab if showAllTech is false
     const shouldLimit = techFilter === 'all' && !showAllTech;
-    const displayedSkills = shouldLimit ? filteredSkills.slice(0, 5) : filteredSkills;
+    const displayedSkills = shouldLimit ? filteredSkills.slice(0, 6) : filteredSkills;
 
     // Define sub-filter tabs
     const subTabs = [
@@ -906,22 +893,22 @@ export default function Portfolio() {
           </AnimatePresence>
         </motion.div>
 
-        {/* Show More / Show Less Toggle Button (Only for 'all' filter and when more than 5 skills) */}
-        {techFilter === 'all' && filteredSkills.length > 5 && (
-          <div className="flex justify-center pt-4">
+        {/* Show More / Show Less Toggle Button (Only for 'all' filter and when more than 6 skills) */}
+        {techFilter === 'all' && filteredSkills.length > 6 && (
+          <div className="flex justify-center pt-2">
             <button
               onClick={() => setShowAllTech(!showAllTech)}
-              className="px-8 py-3 bg-card/40 hover:bg-card/70 backdrop-blur-md border border-border hover:border-primary/50 text-foreground hover:text-primary rounded-xl font-bold transition-all duration-300 flex items-center gap-2 hover:shadow-lg shadow-sm cursor-pointer group"
+              className="px-4 py-2 bg-card/50 hover:bg-card/80 backdrop-blur-md border border-border/80 hover:border-primary/50 text-muted-foreground hover:text-primary rounded-full text-xs font-semibold transition-all duration-300 flex items-center gap-1.5 shadow-xs hover:shadow-sm cursor-pointer group"
             >
               {showAllTech ? (
                 <>
-                  Show Less Technologies
-                  <ChevronUp className="w-4.5 h-4.5 transform group-hover:-translate-y-0.5 transition-transform duration-300" />
+                  <span>Show Less</span>
+                  <ChevronUp className="w-3.5 h-3.5 transform group-hover:-translate-y-0.5 transition-transform duration-300" />
                 </>
               ) : (
                 <>
-                  Show More Technologies ({filteredSkills.length - 5} More)
-                  <ChevronDown className="w-4.5 h-4.5 transform group-hover:translate-y-0.5 transition-transform duration-300" />
+                  <span>Show More ({filteredSkills.length - 6} More)</span>
+                  <ChevronDown className="w-3.5 h-3.5 transform group-hover:translate-y-0.5 transition-transform duration-300" />
                 </>
               )}
             </button>
@@ -932,7 +919,7 @@ export default function Portfolio() {
   };
 
   return (
-    <section id="portfolio" className="py-20 relative overflow-hidden">
+    <section id="portfolio" className="pt-8 pb-10 relative overflow-hidden">
       {/* Background decorations */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-card/20 to-background -z-10" />
       <div className="absolute inset-0 -z-10">
@@ -940,78 +927,89 @@ export default function Portfolio() {
         <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-secondary/5 rounded-full blur-3xl" />
       </div>
 
-      <div className="container mx-auto px-6">
+      <div className="max-w-5xl mx-auto px-6">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-8"
         >
-          <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full mb-4 font-semibold text-sm">
+          <span className="inline-block px-3 py-1 bg-primary/10 border border-primary/20 text-primary rounded-full mb-3 font-semibold text-xs">
             Showcase
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-3">
             Portfolio{' '}
-            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#8b5cf6] to-[#c084fc] bg-clip-text text-transparent">
               Showcase
             </span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Explore my journey through projects, certifications, and technical expertise. Each section represents a milestone in my learning path.
+          <p className="text-muted-foreground text-sm max-w-xl mx-auto leading-relaxed">
+            Explore my journey through projects, certifications, and technical expertise.
           </p>
         </motion.div>
 
-        {/* Unified Custom Tab Switcher */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-          {/* Projects Tab */}
-          <motion.button
-            whileHover={{ scale: 1.02, y: -2 }}
-            whileTap={{ scale: 0.98 }}
-            onClick={() => setActiveTab('projects')}
-            className={`flex flex-col items-center justify-center p-6 rounded-2xl border backdrop-blur-sm transition-all duration-300 cursor-pointer ${
-              activeTab === 'projects'
-                ? 'bg-primary/5 border-primary shadow-lg shadow-primary/5 text-foreground'
-                : 'bg-card/20 border-border hover:border-primary/50 text-muted-foreground hover:text-foreground'
-            }`}
-          >
-            <Code2 className={`w-8 h-8 mb-3 ${activeTab === 'projects' ? 'text-primary' : 'text-muted-foreground'}`} />
-            <span className="font-bold text-lg">Projects</span>
-            <span className="text-xs text-muted-foreground mt-1 text-center">My coding creations & solutions</span>
-          </motion.button>
+        {/* Modern Segmented Capsule Tab Switcher */}
+        <div className="flex justify-center mb-10">
+          <div className="inline-flex p-1.5 bg-card/60 backdrop-blur-md border border-border/80 rounded-2xl gap-1.5 shadow-sm max-w-xl w-full justify-between">
+            {/* Projects Tab */}
+            <motion.button
+              whileTap={{ scale: 0.97 }}
+              onClick={() => setActiveTab('projects')}
+              className={`flex-1 py-2.5 px-3 rounded-xl font-bold text-xs sm:text-sm transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer ${
+                activeTab === 'projects'
+                  ? 'bg-gradient-to-r from-primary to-secondary text-white shadow-md shadow-primary/25'
+                  : 'text-muted-foreground hover:text-foreground hover:bg-muted/40'
+              }`}
+            >
+              <Code2 className="w-4 h-4 shrink-0" />
+              <span>Projects</span>
+              <span className={`text-[10px] px-2 py-0.5 rounded-full font-semibold ${
+                activeTab === 'projects' ? 'bg-white/20 text-white' : 'bg-muted/60 text-muted-foreground'
+              }`}>
+                {projects.length}
+              </span>
+            </motion.button>
 
-          {/* Certificates Tab */}
-          <motion.button
-            whileHover={{ scale: 1.02, y: -2 }}
-            whileTap={{ scale: 0.98 }}
-            onClick={() => setActiveTab('certificates')}
-            className={`flex flex-col items-center justify-center p-6 rounded-2xl border backdrop-blur-sm transition-all duration-300 cursor-pointer ${
-              activeTab === 'certificates'
-                ? 'bg-secondary/5 border-secondary shadow-lg shadow-secondary/5 text-foreground'
-                : 'bg-card/20 border-border hover:border-secondary/50 text-muted-foreground hover:text-foreground'
-            }`}
-          >
-            <Award className={`w-8 h-8 mb-3 ${activeTab === 'certificates' ? 'text-secondary' : 'text-muted-foreground'}`} />
-            <span className="font-bold text-lg">Certificates</span>
-            <span className="text-xs text-muted-foreground mt-1 text-center">Verified professional credentials</span>
-          </motion.button>
+            {/* Certificates Tab */}
+            <motion.button
+              whileTap={{ scale: 0.97 }}
+              onClick={() => setActiveTab('certificates')}
+              className={`flex-1 py-2.5 px-3 rounded-xl font-bold text-xs sm:text-sm transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer ${
+                activeTab === 'certificates'
+                  ? 'bg-gradient-to-r from-primary to-secondary text-white shadow-md shadow-primary/25'
+                  : 'text-muted-foreground hover:text-foreground hover:bg-muted/40'
+              }`}
+            >
+              <Award className="w-4 h-4 shrink-0" />
+              <span>Certificates</span>
+              <span className={`text-[10px] px-2 py-0.5 rounded-full font-semibold ${
+                activeTab === 'certificates' ? 'bg-white/20 text-white' : 'bg-muted/60 text-muted-foreground'
+              }`}>
+                {certifications.length}
+              </span>
+            </motion.button>
 
-          {/* Tech Stack Tab */}
-          <motion.button
-            whileHover={{ scale: 1.02, y: -2 }}
-            whileTap={{ scale: 0.98 }}
-            onClick={() => setActiveTab('techstack')}
-            className={`flex flex-col items-center justify-center p-6 rounded-2xl border backdrop-blur-sm transition-all duration-300 cursor-pointer ${
-              activeTab === 'techstack'
-                ? 'bg-accent/5 border-accent shadow-lg shadow-accent/5 text-foreground'
-                : 'bg-card/20 border-border hover:border-accent/50 text-muted-foreground hover:text-foreground'
-            }`}
-          >
-            <Laptop className={`w-8 h-8 mb-3 ${activeTab === 'techstack' ? 'text-accent' : 'text-muted-foreground'}`} />
-            <span className="font-bold text-lg">Tech Stack</span>
-            <span className="text-xs text-muted-foreground mt-1 text-center">My technical skills & expertise</span>
-          </motion.button>
+            {/* Tech Stack Tab */}
+            <motion.button
+              whileTap={{ scale: 0.97 }}
+              onClick={() => setActiveTab('techstack')}
+              className={`flex-1 py-2.5 px-3 rounded-xl font-bold text-xs sm:text-sm transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer ${
+                activeTab === 'techstack'
+                  ? 'bg-gradient-to-r from-primary to-secondary text-white shadow-md shadow-primary/25'
+                  : 'text-muted-foreground hover:text-foreground hover:bg-muted/40'
+              }`}
+            >
+              <Laptop className="w-4 h-4 shrink-0" />
+              <span>Tech Stack</span>
+              <span className={`text-[10px] px-2 py-0.5 rounded-full font-semibold ${
+                activeTab === 'techstack' ? 'bg-white/20 text-white' : 'bg-muted/60 text-muted-foreground'
+              }`}>
+                {skills.length}
+              </span>
+            </motion.button>
+          </div>
         </div>
 
         {/* Tab Content Area with Smooth Transitions */}
@@ -1126,7 +1124,7 @@ export default function Portfolio() {
                   )}
                 </div>
 
-                <div className="flex flex-wrap items-center gap-4">
+                <div className="flex flex-wrap items-center gap-3">
                   <span
                     className={`px-4 py-1.5 rounded-full text-sm font-semibold ${
                       selectedProject.status === 'Completed'
@@ -1139,6 +1137,12 @@ export default function Portfolio() {
                   <span className="px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-semibold">
                     {selectedProject.category}
                   </span>
+                  {selectedProject.badge && (
+                    <span className="px-3.5 py-1 bg-amber-500/15 border border-amber-500/40 text-amber-700 dark:text-amber-300 rounded-full text-sm font-bold flex items-center gap-1.5 shadow-xs">
+                      <Award className="w-4 h-4 text-amber-600 dark:text-amber-400" />
+                      {selectedProject.badge}
+                    </span>
+                  )}
                 </div>
 
                 <div>

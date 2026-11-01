@@ -3,87 +3,109 @@ import { Code2, Award, Briefcase, Sparkles } from 'lucide-react';
 
 export default function About() {
   const stats = [
-    { icon: Code2, label: 'Projects Completed', value: '6+' },
+    { icon: Code2, label: 'Projects Completed', value: '5+' },
     { icon: Briefcase, label: 'Years Experience', value: '4+' },
     { icon: Sparkles, label: 'Technologies Mastered', value: '10+' },
     { icon: Award, label: 'Certifications Earned', value: '10+' },
   ];
 
   return (
-    <section id="about" className="py-20 relative overflow-hidden">
+    <section id="about" className="pt-16 pb-8 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-background via-card/50 to-background -z-10" />
 
-      <div className="container mx-auto px-6">
+      <div className="max-w-5xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10"
         >
-          <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full mb-4">
+          <span className="inline-block px-3 py-1 bg-primary/10 border border-primary/20 text-primary text-xs font-semibold rounded-full mb-3">
             About Me
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
-            Get to Know More About Me
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight text-foreground">
+            Get to Know More About{' '}
+            <span className="text-[#a78bfa] dark:text-[#c084fc]">Me</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Passionate about creating innovative solutions and exceptional user experiences
-          </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="relative"
-          >
-            <div className="relative w-full max-w-[260px] md:max-w-[300px] mx-auto">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-2xl blur-2xl opacity-20" />
-              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden border border-border bg-card shadow-2xl">
-                <img 
-                  src="/profile.png" 
-                  alt="Zulfa Aulia Hanafi" 
-                  className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-500"
-                />
+        {/* Compact container for this section */}
+        <div className="mb-16">
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-8 lg:gap-12">
+            {/* Photo — 300x400px fixed */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="flex-shrink-0"
+            >
+              <div className="relative" style={{ width: '300px', height: '400px' }}>
+                <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-2xl blur-2xl opacity-20" />
+                <div
+                  className="relative rounded-2xl overflow-hidden border border-border bg-card shadow-2xl"
+                  style={{ width: '300px', height: '400px' }}
+                >
+                  <img
+                    src="/profile.png"
+                    alt="Zulfa Aulia Hanafi"
+                    className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="space-y-6"
-          >
-            <h3 className="text-3xl font-bold">Professional Biography</h3>
-            <p className="text-muted-foreground leading-relaxed text-justify">
-              Informatics graduate from Universitas Gunadarma with a strong focus on front-end web development. Proficient in building responsive, interactive, and user-friendly web interfaces using React.js and JavaScript. Experienced in integrating RESTful APIs, implementing authentication flows, and collaborating with back-end technologies such as PHP, Laravel, and Node.js. Also experienced in developing full-stack applications, including admin dashboards and an AI-powered chatbot using Retrieval-Augmented Generation (RAG). Passionate about creating intuitive user experiences and maintainable web applications.
-            </p>
-            <p className="text-muted-foreground leading-relaxed text-justify">
-              My journey in software development has spanned across building real-world projects such as AI-powered chatbot systems, waste management applications, coffee inventory tracking, and municipal government portals. I focus on writing clean, scalable code and delivering seamless user interfaces.
-            </p>
+            {/* Text — flex-1, precise typography */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="flex-1"
+            >
+              <p
+                className="text-muted-foreground text-justify"
+                style={{ fontSize: '16px', lineHeight: '1.8', marginBottom: '20px' }}
+              >
+                Informatics graduate from Universitas Gunadarma with a strong focus on web development. Proficient in building responsive, interactive, and user-friendly web interfaces using React.js and JavaScript. Experienced in implementing authentication flows and collaborating with back-end technologies such as PHP, Laravel, and Node.js.
+              </p>
+              <p
+                className="text-muted-foreground text-justify"
+                style={{ fontSize: '16px', lineHeight: '1.8', marginBottom: '20px' }}
+              >
+                Also experienced in developing full-stack applications, including admin dashboards and an AI-powered chatbot using Retrieval-Augmented Generation (RAG). My journey in software development has spanned across building real-world projects such as waste management applications, coffee inventory tracking, and municipal government portals. I focus on writing clean, scalable code and delivering seamless user interfaces.
+              </p>
 
-            <div className="space-y-4 pt-4">
-              <div>
-                <h4 className="font-semibold mb-2 text-foreground">Education</h4>
-                <p className="text-muted-foreground font-medium">
-                  Bachelor of Informatics (GPA: 3.79 / 4.00)
-                </p>
-                <p className="text-sm text-muted-foreground">Universitas Gunadarma • 2022 – 2026</p>
+              <div style={{ marginTop: '24px', display: 'flex', flexDirection: 'column', gap: '20px' }}>
+                <div>
+                  <h4 className="font-semibold text-foreground mb-1">Education</h4>
+                  <p
+                    className="text-muted-foreground font-medium"
+                    style={{ fontSize: '16px', lineHeight: '1.8' }}
+                  >
+                    Bachelor of Informatics (GPA: 3.79 / 4.00)
+                  </p>
+                  <p
+                    className="text-muted-foreground"
+                    style={{ fontSize: '16px', lineHeight: '1.8' }}
+                  >
+                    Universitas Gunadarma • 2022 – 2026
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="font-semibold text-foreground mb-1">Career Goals</h4>
+                  <p
+                    className="text-muted-foreground"
+                    style={{ fontSize: '16px', lineHeight: '1.8' }}
+                  >
+                    Aspiring to build a career in web development and programming, while continuously expanding my technical expertise and contributing to innovative digital solutions.
+                  </p>
+                </div>
               </div>
-
-              <div>
-                <h4 className="font-semibold mb-2 text-foreground">Career Goals</h4>
-                <p className="text-muted-foreground">
-                  Aspiring to grow as a Frontend Web Developer while contributing to innovative projects, improving user experiences, and building impactful digital solutions through modern web technologies.
-                </p>
-              </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         </div>
 
         <motion.div

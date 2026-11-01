@@ -44,9 +44,9 @@ export default function App() {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 p-4 bg-gradient-to-r from-primary to-secondary rounded-full text-white shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 z-50"
+          className="fixed bottom-6 right-6 p-3 bg-gradient-to-r from-primary to-secondary rounded-full text-white shadow-lg shadow-primary/25 hover:shadow-xl hover:scale-110 transition-all duration-300 z-50 cursor-pointer"
         >
-          <ChevronUp className="w-6 h-6" />
+          <ChevronUp className="w-5 h-5" />
         </motion.button>
       )}
     </div>
